@@ -40,7 +40,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http
                 .cors().and()
-                .csrf().disable().exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+                .csrf().disable()
+                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .logout()
                 .invalidateHttpSession(true)
                 .clearAuthentication(true)
