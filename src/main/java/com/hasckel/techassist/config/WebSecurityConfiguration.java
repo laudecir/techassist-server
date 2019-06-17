@@ -58,7 +58,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public FilterRegistrationBean corsFilter() {
+    public FilterRegistrationBean corsFilterRegistrationBean() {
         CorsConfiguration config = new CorsConfiguration();
         config.applyPermitDefaultValues();
         config.setAllowCredentials(true);
